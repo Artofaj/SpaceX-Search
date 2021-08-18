@@ -3,7 +3,6 @@ import Searchbar from "./components/searchbar";
 import PastLaunches from "./components/pastLaunches";
 import SearchResult from "./components/searchResult";
 
-
 const App = () => (
   <div
     style={{
