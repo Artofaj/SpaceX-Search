@@ -5,12 +5,12 @@ const PastLaunches = () => {
   const Launches = [];
 
   const putData = (data) => {
+    console.log(data);
     Launches.push({ name: data.name, id: data.id });
-    console.log(Launches);
   };
 
   useEffect(() => {
-    fetch("https://api.spacexdata.com/v4/launches/latest")
+    fetch("https://api.spacexdata.com/v4/launches/past")
       .then((response) => response.json())
       .then((data) => putData(data));
     return () => {};
