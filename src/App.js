@@ -16,8 +16,12 @@ const App = () => (
       padding: "1rem",
     }}
   >
-    <Searchbar />
-    <PastLaunches />
+    <div className="limited-width wrapper --column">
+      <Searchbar />
+      <main>
+        <PastLaunches />
+      </main>
+    </div>
   </div>
 );
 

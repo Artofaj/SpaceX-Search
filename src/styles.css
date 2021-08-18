@@ -1,9 +1,30 @@
 :root {
   --primary-color: blue;
+  --primary-font-color: #ffffff;
 
-  --rounded-corners: 10px;
+  --rounded-corners: 5px;
 
   --padding-sm: 0.5rem;
   --padding-md: 1rem;
   --padding-lg: 1.5rem;
+}
+
+html {
+  background-color: #000;
+  color: var(--primary-font-color);
+}
+
+.limited-width {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
+  gap: var(--padding-lg);
+}
+
+.--column {
+  flex-direction: column;
 }
