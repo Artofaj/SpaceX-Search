@@ -1,4 +1,5 @@
 import React from 'react';
+import Searchbar from './searchbar';
 
 const App = () => (
   <div style={{
@@ -13,14 +14,7 @@ const App = () => (
     padding: '1rem',
   }}
   >
-    <h1 style={{
-      fontSize: '2rem',
-      fontWeight: 'normal',
-      textAlign: 'center',
-    }}
-    >
-      Find your project instructions in <code style={{ padding: '0 .25em', background: '#e4e4e4' }}>README.md</code>
-    </h1>
+    <Searchbar />
   </div>
 );
 
