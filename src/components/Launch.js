@@ -4,7 +4,7 @@ const Launch = (params) => {
   return (
     <div className="launch">
       <h1>{params.name}</h1>
-      <p>{params.id}</p>
+      <p>#{params.id}</p>
     </div>
   );
 };
