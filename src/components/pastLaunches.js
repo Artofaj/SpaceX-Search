@@ -4,7 +4,7 @@ import Launch from "./Launch";
 const PastLaunches = () => {
   const Launches = [];
 
-  const putData = (data) => {
+ /*  const putData = (data) => {
     console.log(data);
     Launches.push({ name: data.name, id: data.id });
   };
@@ -14,7 +14,7 @@ const PastLaunches = () => {
       .then((response) => response.json())
       .then((data) => putData(data));
     return () => {};
-  }, []);
+  }, []); */
 
   return (
     <section id="Past Launches">
