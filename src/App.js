@@ -1,5 +1,6 @@
 import React from 'react';
 import Searchbar from './searchbar';
+import PastLaunches from './pastLaunches';
 
 const App = () => (
   <div style={{
@@ -15,6 +16,9 @@ const App = () => (
   }}
   >
     <Searchbar />
+    <PastLaunches />
+
+
   </div>
 );
 
