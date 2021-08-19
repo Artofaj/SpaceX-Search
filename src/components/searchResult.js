@@ -15,6 +15,8 @@ const SearchResult = () => {
               key={launchStore.searchResult.id}
               name={launchStore.searchResult.name}
               id={launchStore.searchResult.id}
+              success={launchStore.searchResult.success}
+              date={launchStore.searchResult.date}
             />
           )}
         </section>
