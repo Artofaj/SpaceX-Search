@@ -6,13 +6,6 @@ import { useObserver } from "mobx-react";
 const PastLaunches = () => {
   const launches = launchStore.launches;
 
-  useEffect(() => {
-    fetch("https://api.spacexdata.com/v4/launches/past")
-      .then((response) => response.json())
-      .then((data) => launchStore.putData(data));
-    return () => {};
-  }, []);
-
   return useObserver(() => (
     <section id="Past Launches">
       <h1>Past launches</h1>
