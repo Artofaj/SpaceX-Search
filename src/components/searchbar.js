@@ -1,6 +1,10 @@
 import React from "react";
 
 const Searchbar = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div
       style={{
@@ -9,9 +13,9 @@ const Searchbar = () => {
       }}
       className="searchbar-wrapper"
     >
-      <form className="searchbar">
+      <form className="searchbar" onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="search">
-        <input type="text"  id="search" placeholder="search"/>
+          <input type="text" id="search" placeholder="search by id" />
         </label>
         <button>submit</button>
       </form>

@@ -1,14 +1,22 @@
 import React from "react";
 import Launch from "./Launch";
+import { useObserver } from "mobx-react";
+import launchStore from "../stores/launchStore";
 
 const SearchResult = () => {
-  return (
+  return useObserver(() => (
     <section>
       <h1>Search Result</h1>
 
-      <Launch key={564564564} name={"Launch1"} id={564564564} />
+      {launchStore.searchResult && (
+        <Launch
+          key={launchStore.searchResult.id}
+          name={launchStore.searchResult.name}
+          id={launchStore.searchResult.id}
+        />
+      )}
     </section>
-  );
+  ));
 };
 
 export default SearchResult;
