@@ -49,7 +49,7 @@ const Launch = (params) => {
     );
 
     return (
-      <div>
+      <div style={{fontSize:"2rem", paddingTop: "var(--padding-md)"}}>
         {hours} <Separator /> {minutes} <Separator /> {seconds}
       </div>
     );
@@ -65,7 +65,7 @@ const Launch = (params) => {
   return (
     <div className="launch" style={styles}>
       <h1>{params.name}</h1>
-      <div style={{ justifyContent: "space-between" }} className="wrapper">
+      <div style={{ justifyContent: "space-between", alignItems: "last baseline" }} className="wrapper">
         {!params.simple && (
           <div>Time elapsed since launch {getElapsedTime()} </div>
         )}
