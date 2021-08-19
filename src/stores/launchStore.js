@@ -17,8 +17,15 @@ class LaunchStore {
       .then((data) => this.putData(data));
   }
 
-  triggerSearch(e) {
+  setSearchString(e) {
     this.searchString = e.target.value;
+  }
+
+  triggerSearch(e) {
+    e.preventDefault();
+    this.searchResult = this.launches.filter(
+      (launch) => launch.id === this.searchString
+    );
   }
 
   putData(data) {
@@ -29,8 +36,6 @@ class LaunchStore {
         date: launch.date_utc,
         success: launch.success,
       });
-      this.searchResult = this.launches[0];
-      console.log(launch);
     });
   }
 

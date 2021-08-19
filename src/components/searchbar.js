@@ -2,11 +2,6 @@ import React from "react";
 import launchStore from "../stores/launchStore";
 
 const Searchbar = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    launchStore.triggerSearch(e);
-  };
-
   return (
     <div
       style={{
@@ -15,9 +10,17 @@ const Searchbar = () => {
       }}
       className="searchbar-wrapper"
     >
-      <form className="searchbar" onSubmit={(e) => handleSubmit(e)}>
+      <form
+        className="searchbar"
+        onSubmit={(e) => launchStore.triggerSearch(e)}
+      >
         <label htmlFor="search">
-          <input type="text" id="search" placeholder="search by id" />
+          <input
+            type="text"
+            id="search"
+            placeholder="search by id"
+            onChange={(e) => launchStore.setSearchString(e)}
+          />
         </label>
         <button>submit</button>
       </form>
