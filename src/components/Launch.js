@@ -17,6 +17,10 @@ const Launch = (params) => {
     <div className="launch" style={styles}>
       <h1>{params.name}</h1>
       <p>#{params.id}</p>
+
+      {!params.simple &&
+      <p>time since launch</p>
+      }
     </div>
   );
 };
