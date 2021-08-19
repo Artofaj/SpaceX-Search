@@ -2,13 +2,14 @@ import React from "react";
 
 
 const Launch = (params) => {
-  
+
   const styles = {
     backgroundColor: params.success
       ? "var(--success-color)"
       : "var(--failure-color)",
     borderRadius: "var(--rounded-corners)",
     padding: "var(--padding-sm)",
+    flex: "1 1 25%"
   }; 
 
 
