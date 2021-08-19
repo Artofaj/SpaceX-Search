@@ -10,11 +10,13 @@ const Launch = (params) => {
     flex: "1 1 25%",
   };
 
+  const date = params.date
+
   return (
     <div className="launch" style={styles}>
       <h1>{params.name}</h1>
-      <div style={{justifyContent:"space-between"}} className="wrapper">
-        {!params.simple && <p>time since launch</p>}
+      <div style={{ justifyContent: "space-between" }} className="wrapper">
+        {!params.simple && <p>time since launch {date}</p>}
         <p>#{params.id}</p>
       </div>
     </div>
