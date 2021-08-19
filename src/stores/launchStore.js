@@ -5,6 +5,7 @@ class LaunchStore {
 
   constructor() {
     this.launches = [];
+    this.searchTriggered = false;
     this.searchString = "";
     this.searchResult = null;
     makeAutoObservable(this);
@@ -23,6 +24,7 @@ class LaunchStore {
 
   triggerSearch(e) {
     e.preventDefault();
+    this.searchTriggered = true;
     this.searchResult = this.launches.filter(
       (launch) => launch.id === this.searchString
     )[0];
