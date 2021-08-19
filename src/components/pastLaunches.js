@@ -8,23 +8,28 @@ const PastLaunches = () => {
     a.date > b.date ? -1 : 1
   );
 
-  const latestLaunches = launches.filter((launch, index) => index < 3);
+  const numberOfLaunches = 3;
 
   return useObserver(() => (
     <section id="Past Launches">
       <h1>Past launches</h1>
 
       <div id="launch-container" className="wrapper">
-        {latestLaunches.map((launch) => (
-          <Launch
-            key={launch.id}
-            name={launch.name}
-            id={launch.id}
-            success={launch.success}
-            date={launch.date}
-            simple
-          />
-        ))}
+        {launches.map((launch, index) => {
+          if (index < numberOfLaunches) {
+            return (
+              <Launch
+                key={launch.id}
+                name={launch.name}
+                id={launch.id}
+                success={launch.success}
+                date={launch.date}
+                simple
+              />
+            );
+          }
+          return null;
+        })}
       </div>
     </section>
   ));
