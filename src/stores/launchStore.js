@@ -1,18 +1,11 @@
 import { makeAutoObservable } from "mobx";
 
 class LaunchStore {
-  cartItems;
+  launches;
 
   constructor() {
     this.launches = [];
     makeAutoObservable(this);
-  }
-
-  componentDidMount() {
-      console.log(this.launches);
-    fetch("https://api.spacexdata.com/v4/launches/past")
-      .then((response) => response.json())
-      .then((data) => this.putData(data));
   }
 
   putData(data) {
@@ -24,7 +17,7 @@ class LaunchStore {
 
   dehydrate() {
     return {
-      cartItems: this.cartItems,
+      launches: this.launches,
     };
   }
 }

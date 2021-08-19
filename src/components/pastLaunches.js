@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Launch from "./Launch";
 import launchStore from "../stores/launchStore";
 import { useObserver } from "mobx-react";

@@ -4,7 +4,6 @@ import PastLaunches from "./components/pastLaunches";
 import SearchResult from "./components/searchResult";
 import launchStore from "./stores/launchStore";
 
-
 const App = () => {
   useEffect(() => {
     fetch("https://api.spacexdata.com/v4/launches/past")
