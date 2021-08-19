@@ -1,8 +1,10 @@
 import React from "react";
+import launchStore from "../stores/launchStore";
 
 const Searchbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    launchStore.triggerSearch(e);
   };
 
   return (

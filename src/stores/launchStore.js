@@ -5,17 +5,22 @@ class LaunchStore {
 
   constructor() {
     this.launches = [];
+    this.searchTriggered = false;
     this.searchResult = null;
     makeAutoObservable(this);
     this.fetchData();
   }
-  
+
   fetchData() {
     fetch("https://api.spacexdata.com/v4/launches/past")
-    .then((response) => response.json())
-    .then((data) => this.putData(data));
+      .then((response) => response.json())
+      .then((data) => this.putData(data));
   }
-  
+
+  triggerSearch(e) {
+    this.searchTriggered = true;
+  }
+
   putData(data) {
     data.forEach((launch) => {
       this.launches.push({

@@ -4,19 +4,22 @@ import { useObserver } from "mobx-react";
 import launchStore from "../stores/launchStore";
 
 const SearchResult = () => {
-  return useObserver(() => (
-    <section>
-      <h1>Search Result</h1>
+  return useObserver(
+    () =>
+      launchStore.searchTriggered && (
+        <section>
+          <h1>Search Result</h1>
 
-      {launchStore.searchResult && (
-        <Launch
-          key={launchStore.searchResult.id}
-          name={launchStore.searchResult.name}
-          id={launchStore.searchResult.id}
-        />
-      )}
-    </section>
-  ));
+          {launchStore.searchResult && (
+            <Launch
+              key={launchStore.searchResult.id}
+              name={launchStore.searchResult.name}
+              id={launchStore.searchResult.id}
+            />
+          )}
+        </section>
+      )
+  );
 };
 
 export default SearchResult;
