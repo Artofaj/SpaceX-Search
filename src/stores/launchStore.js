@@ -25,7 +25,7 @@ class LaunchStore {
     e.preventDefault();
     this.searchResult = this.launches.filter(
       (launch) => launch.id === this.searchString
-    );
+    )[0];
   }
 
   putData(data) {
