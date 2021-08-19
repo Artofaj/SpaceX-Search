@@ -4,7 +4,7 @@ import launchStore from "../stores/launchStore";
 import { useObserver } from "mobx-react";
 
 const PastLaunches = () => {
-  const launches = launchStore.launches.sort();
+  const launches = launchStore.launches.sort((a, b) => (a.date > b.date) ? -1 : 1)
 
   return useObserver(() => (
     <section id="Past Launches">
@@ -17,6 +17,7 @@ const PastLaunches = () => {
             name={launch.name}
             id={launch.id}
             success={launch.success}
+            date={launch.date}
           />
         ))}
       </div>
