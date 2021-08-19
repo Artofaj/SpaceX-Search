@@ -7,7 +7,7 @@ const Launch = (params) => {
       ? "var(--success-color)"
       : "var(--failure-color)",
     borderRadius: "var(--rounded-corners)",
-    padding: "var(--padding-sm)",
+    padding: "var(--padding-sm) var(--padding-md)",
     flex: "1 1 25%",
   };
 
