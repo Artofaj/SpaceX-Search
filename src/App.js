@@ -1,17 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Searchbar from "./components/searchbar";
 import PastLaunches from "./components/pastLaunches";
 import SearchResult from "./components/searchResult";
-import launchStore from "./stores/launchStore";
 
 const App = () => {
-  useEffect(() => {
-    fetch("https://api.spacexdata.com/v4/launches/past")
-      .then((response) => response.json())
-      .then((data) => launchStore.putData(data));
-    return () => {};
-  }, []);
-
   return (
     <div
       style={{
