@@ -4,7 +4,7 @@ import launchStore from "../stores/launchStore";
 import { useObserver } from "mobx-react";
 
 const PastLaunches = () => {
-  const launches = launchStore.launches;
+  const launches = launchStore.launches.sort();
 
   return useObserver(() => (
     <section id="Past Launches">
@@ -12,7 +12,12 @@ const PastLaunches = () => {
 
       <div id="launch-container" className="wrapper">
         {launches.map((launch) => (
-          <Launch key={launch.id} name={launch.name} id={launch.id} />
+          <Launch
+            key={launch.id}
+            name={launch.name}
+            id={launch.id}
+            success={launch.success}
+          />
         ))}
       </div>
     </section>

@@ -1,12 +1,17 @@
 import React from "react";
 
-const styles= {
-  backgroundColor: "var(--primary-color)",
-  borderRadius: "var(--rounded-corners)",
-  padding: "var(--padding-sm)"
-} 
 
 const Launch = (params) => {
+  
+  const styles = {
+    backgroundColor: params.success
+      ? "var(--success-color)"
+      : "var(--failure-color)",
+    borderRadius: "var(--rounded-corners)",
+    padding: "var(--padding-sm)",
+  }; 
+
+
   return (
     <div className="launch" style={styles}>
       <h1>{params.name}</h1>
