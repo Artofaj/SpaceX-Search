@@ -5,7 +5,7 @@ class LaunchStore {
 
   constructor() {
     this.launches = [];
-    this.searchTriggered = false;
+    this.searchString = "";
     this.searchResult = null;
     makeAutoObservable(this);
     this.fetchData();
@@ -18,7 +18,7 @@ class LaunchStore {
   }
 
   triggerSearch(e) {
-    this.searchTriggered = true;
+    this.searchString = e.target.value;
   }
 
   putData(data) {

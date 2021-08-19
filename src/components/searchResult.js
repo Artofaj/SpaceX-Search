@@ -6,7 +6,7 @@ import launchStore from "../stores/launchStore";
 const SearchResult = () => {
   return useObserver(
     () =>
-      launchStore.searchTriggered && (
+      launchStore.searchString !== "" && (
         <section>
           <h1>Search Result</h1>
 
