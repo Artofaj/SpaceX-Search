@@ -23,6 +23,7 @@ html {
 .wrapper {
   display: flex;
   gap: var(--padding-lg);
+  flex-wrap: wrap;
 }
 
 .--column {

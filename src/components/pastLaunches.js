@@ -1,30 +1,29 @@
 import React, { useEffect } from "react";
 import Launch from "./Launch";
+import launchStore from "../stores/launchStore";
+import { useObserver } from "mobx-react";
 
 const PastLaunches = () => {
-  const Launches = [];
-
- /*  const putData = (data) => {
-    console.log(data);
-    Launches.push({ name: data.name, id: data.id });
-  };
+  const launches = launchStore.launches;
 
   useEffect(() => {
     fetch("https://api.spacexdata.com/v4/launches/past")
       .then((response) => response.json())
-      .then((data) => putData(data));
+      .then((data) => launchStore.putData(data));
     return () => {};
-  }, []); */
+  }, []);
 
-  return (
+  return useObserver(() => (
     <section id="Past Launches">
       <h1>Past launches</h1>
 
       <div id="launch-container" className="wrapper">
-          <Launch key={564564564} name={"Launch1"} id={564564564} />
+        {launches.map((launch) => (
+          <Launch key={launch.id} name={launch.name} id={launch.id} />
+        ))}
       </div>
     </section>
-  );
+  ));
 };
 
 export default PastLaunches;

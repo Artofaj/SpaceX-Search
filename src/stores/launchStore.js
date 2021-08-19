@@ -9,25 +9,18 @@ class LaunchStore {
   }
 
   componentDidMount() {
+      console.log(this.launches);
     fetch("https://api.spacexdata.com/v4/launches/past")
       .then((response) => response.json())
       .then((data) => this.putData(data));
   }
 
-  putData(data){
-    console.log(data);
-    this.launches.push({ name: data.name, id: data.id });
-  };
-
-
-/*   removeItem(e, item) {
-    e.preventDefault();
-    const index = this.cartItems.indexOf(item);
-
-    if (index > -1) {
-      this.cartItems.splice(index, 1);
-    }
-  } */
+  putData(data) {
+      data.forEach(launch => {
+          this.launches.push({ name: launch.name, id: launch.id });
+      });
+      
+  }
 
   dehydrate() {
     return {
