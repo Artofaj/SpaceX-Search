@@ -15,7 +15,7 @@ const Launch = (params) => {
   const [now, setNow] = useState();
 
   const getBGColor = () => {
-    let bgc = "var(--primary-color)";
+    let bgc = "var(--secondary-bg-color)";
 
     if (!params.simple && params.success) {
       bgc = "var(--success-color)";
@@ -49,7 +49,7 @@ const Launch = (params) => {
     );
 
     return (
-      <div style={{fontSize:"2rem", paddingTop: "var(--padding-md)"}}>
+      <div style={{ fontSize: "2rem", paddingTop: "var(--padding-md)" }}>
         {hours} <Separator /> {minutes} <Separator /> {seconds}
       </div>
     );
@@ -60,12 +60,18 @@ const Launch = (params) => {
     borderRadius: "var(--rounded-corners)",
     padding: "var(--padding-sm) var(--padding-md)",
     flex: "1 1 25%",
+    color: params.simple
+      ? "var(--secondary-font-color)"
+      : "var(--primary-font-color)",
   };
 
   return (
     <div className="launch" style={styles}>
       <h1>{params.name}</h1>
-      <div style={{ justifyContent: "space-between", alignItems: "last baseline" }} className="wrapper">
+      <div
+        style={{ justifyContent: "space-between", alignItems: "last baseline" }}
+        className="wrapper"
+      >
         {!params.simple && (
           <div>Time elapsed since launch {getElapsedTime()} </div>
         )}

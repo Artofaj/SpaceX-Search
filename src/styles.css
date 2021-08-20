@@ -1,8 +1,10 @@
 :root {
-  --primary-color: blue;
-  --success-color: green;
-  --failure-color: red;
-  --primary-font-color: #ffffff;
+  --primary-bg-color: #000;
+  --secondary-bg-color: #fff;
+  --primary-font-color: #fff;
+  --secondary-font-color: #000;
+  --success-color: #27e1c3;
+  --failure-color: #fc016b;
 
   --rounded-corners: 5px;
 
@@ -14,7 +16,7 @@
 }
 
 html {
-  background-color: #000;
+  background-color: var(--primary-bg-color);
   color: var(--primary-font-color);
 }
 
