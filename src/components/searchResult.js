@@ -12,7 +12,10 @@ const ResultError = () => {
   const [random, setRandom] = useState(getRandom());
 
   return (
-    <div style={{ border: " 1px solid #FFF" }} className="card wrapper">
+    <div
+      style={{ border: " 1px solid var(--secondary-bg-color)" }}
+      className="card wrapper"
+    >
       <div style={{ margin: "auto" }}>
         <p>Sorry, we could not find this launch, please try a valid id.</p>
         <p>

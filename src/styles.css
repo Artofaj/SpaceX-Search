@@ -80,9 +80,14 @@ label input {
 .card {
   border-radius: var(--rounded-corners);
   flex: 1 1 20%;
-  padding: var(--padding-sm) var(--padding-md);
+  padding: var(--padding-md);
   max-width: 100%;
   overflow: auto;
+}
+
+.card h1,
+.card p {
+  margin-top: 0;
 }
 
 .searchbar {
