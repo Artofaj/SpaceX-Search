@@ -11,15 +11,15 @@ const Searchbar = () => {
       className="searchbar-wrapper"
     >
       <form
-        className="searchbar"
+        className="wrapper searchbar"
         onSubmit={(e) => launchStore.triggerSearch(e)}
       >
         <label htmlFor="search">
-          launch
+          search launch by id
           <input
             type="text"
             id="search"
-            placeholder="by id"
+            placeholder="search launch by id"
             onChange={(e) => launchStore.setSearchString(e)}
           />
         </label>

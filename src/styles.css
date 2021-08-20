@@ -8,9 +8,11 @@
 
   --rounded-corners: 5px;
 
-  --padding-sm: 0.5rem;
-  --padding-md: 1rem;
-  --padding-lg: 3rem;
+  --padding-sm: 0.75rem;
+  --padding-md: 1.5rem;
+  --padding-lg: 5rem;
+
+  --max-width: 1250px;
 
   font-size: 20px;
 }
@@ -20,9 +22,13 @@ html {
   color: var(--primary-font-color);
 }
 
+body * {
+  box-sizing: border-box;
+}
+
 .limited-width {
   width: 100%;
-  max-width: 1250px;
+  max-width: var(--max-width);
   margin: auto;
 }
 
@@ -38,4 +44,54 @@ html {
 
 section {
   margin-bottom: var(--padding-lg);
+}
+
+button,
+input {
+  appearance: none;
+  padding: var(--padding-sm) var(--padding-md);
+  border: 0;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--success-color);
+  color: var(--primary-font-color);
+}
+
+label {
+  position: relative;
+  flex: 1 1 50%;
+  height: 100%;
+}
+
+label input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+}
+
+table {
+  max-width: 100%;
+  overflow: auto;
+}
+
+.searchbar {
+  width: 100%;
+  max-width: calc(var(--max-width) * 0.75);
+  justify-content: space-around;
+  gap: 0;
+}
+
+@media screen and (max-width: 1060px) {
+  :root {
+    --padding-sm: 0.5rem;
+    --padding-md: 1rem;
+    --padding-lg: 2rem;
+  }
+
+  .searchbar label,
+  .searchbar button {
+    flex: 1 1 100%;
+  }
 }

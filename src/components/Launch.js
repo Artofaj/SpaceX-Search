@@ -78,7 +78,7 @@ const Launch = (params) => {
     backgroundColor: getBGColor(),
     borderRadius: "var(--rounded-corners)",
     padding: "var(--padding-sm) var(--padding-md)",
-    flex: "1 1 25%",
+    flex: "1 1 20%",
     color: params.simple
       ? "var(--secondary-font-color)"
       : "var(--primary-font-color)",
