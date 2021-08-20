@@ -36,7 +36,7 @@ const Launch = (params) => {
   const Separator = () => {
     let blink = isOdd(now) === 1 ? true : false;
 
-    return <span style={{ opacity: blink ? 0.5 : 0.75 }}>:</span>;
+    return <span style={{ opacity: blink ? 0.5 : 0.75, padding: "0 var(--padding-sm)"}}>:</span>;
   };
 
   const getElapsedTime = () => {
@@ -49,8 +49,27 @@ const Launch = (params) => {
     );
 
     return (
-      <div style={{ fontSize: "2rem", paddingTop: "var(--padding-md)" }}>
-        {hours} <Separator /> {minutes} <Separator /> {seconds}
+      <div style={{ paddingTop: "var(--padding-md)" }}>
+        <table style={{ textAlign: "center" }}>
+          <tr>
+            <th>Hours</th>
+            <th />
+            <th>Minutes</th>
+            <th />
+            <th>Seconds</th>
+          </tr>
+          <tr style={{ fontSize: "2rem" }}>
+            <td>{hours}</td>
+            <td>
+              <Separator />
+            </td>
+            <td>{minutes}</td>
+            <td>
+              <Separator />
+            </td>
+            <td>{seconds}</td>
+          </tr>
+        </table>
       </div>
     );
   };
