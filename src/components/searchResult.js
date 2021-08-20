@@ -13,10 +13,15 @@ const ResultError = () => {
 
   return (
     <div
-      style={{ border: " 1px solid var(--secondary-bg-color)" }}
+      style={{
+        border: " 1px solid var(--secondary-bg-color)",
+        backgroundColor: "var(--primary-bg-color)",
+        color: "var(--secondary-bg-color)",
+      }}
       className="card wrapper"
     >
-      <div style={{ margin: "auto" }}>
+      <div style={{ margin: "auto", textAlign: "center" }}>
+        <h1>Nothing found</h1>
         <p>Sorry, we could not find this launch, please try a valid id.</p>
         <p>
           How about the <u>{launchStore.launches[random].id}</u> ?
