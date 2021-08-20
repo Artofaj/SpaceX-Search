@@ -90,6 +90,7 @@ table {
   max-width: calc(var(--max-width) * 0.75);
   justify-content: space-around;
   gap: 0;
+  margin: var(--padding-lg) 0;
 }
 
 @media screen and (max-width: 1060px) {
