@@ -17,10 +17,10 @@ const ResultError = () => {
       <p>
         How about the <u>{launchStore.launches[random].id}</u> ?
       </p>
-      <p>
-        You can of course try{" "}
-        <button onClick={() => setRandom(getRandom())}>a different one</button>
-      </p>
+
+      <button onClick={() => setRandom(getRandom())}>
+        Try a different one
+      </button>
     </>
   );
 };
