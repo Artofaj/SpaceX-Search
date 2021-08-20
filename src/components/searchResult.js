@@ -12,16 +12,18 @@ const ResultError = () => {
   const [random, setRandom] = useState(getRandom());
 
   return (
-    <>
-      <p>Sorry, we could not find this launch, please try a valid id.</p>
-      <p>
-        How about the <u>{launchStore.launches[random].id}</u> ?
-      </p>
+    <div style={{ border: " 1px solid #FFF" }} className="card wrapper">
+      <div style={{ margin: "auto" }}>
+        <p>Sorry, we could not find this launch, please try a valid id.</p>
+        <p>
+          How about the <u>{launchStore.launches[random].id}</u> ?
+        </p>
 
-      <button onClick={() => setRandom(getRandom())}>
-        Try a different one
-      </button>
-    </>
+        <button onClick={() => setRandom(getRandom())}>
+          Try a different one
+        </button>
+      </div>
+    </div>
   );
 };
 
