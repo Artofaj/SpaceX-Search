@@ -76,16 +76,13 @@ const Launch = (params) => {
 
   const styles = {
     backgroundColor: getBGColor(),
-    borderRadius: "var(--rounded-corners)",
-    padding: "var(--padding-sm) var(--padding-md)",
-    flex: "1 1 20%",
     color: params.simple
       ? "var(--secondary-font-color)"
       : "var(--primary-font-color)",
   };
 
   return (
-    <div className="launch" style={styles}>
+    <div className="card" style={styles}>
       <h1>{params.name}</h1>
       <div
         style={{ justifyContent: "space-between", alignItems: "flex-end" }}

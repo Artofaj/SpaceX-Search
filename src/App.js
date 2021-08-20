@@ -14,7 +14,6 @@ const App = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "1rem",
       }}
     >
       <div className="limited-width wrapper --column">
