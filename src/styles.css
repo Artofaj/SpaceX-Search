@@ -83,6 +83,9 @@ label input {
   padding: var(--padding-md);
   max-width: 100%;
   overflow: auto;
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-font-color);
+  position: relative;
 }
 
 .card h1,

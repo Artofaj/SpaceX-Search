@@ -80,16 +80,22 @@ const Launch = (params) => {
     );
   };
 
-  const cardStyles = {
-    backgroundColor: getBGColor(),
-    color: params.simple
-      ? "var(--secondary-font-color)"
-      : "var(--primary-font-color)",
+  const indicatorStyles = {
+    backgroundColor: params.success
+      ? "var(--success-color)"
+      : "var(--failure-color)",
+    width: "2rem",
+    height: "2rem",
+    borderRadius: "100%",
+    position: "absolute",
+    top: "var(--padding-md)",
+    right: "var(--padding-md)",
   };
 
   return (
-    <div className="card" style={cardStyles}>
-      <h1>{params.name}</h1>
+    <div className="card">
+      {!params.simple && <span style={indicatorStyles}/>}
+        <h1>{params.name}</h1>
       <div
         style={{ justifyContent: "space-between", alignItems: "flex-end" }}
         className="wrapper"
