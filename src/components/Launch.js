@@ -88,13 +88,13 @@ const Launch = (params) => {
     <div className="launch" style={styles}>
       <h1>{params.name}</h1>
       <div
-        style={{ justifyContent: "space-between", alignItems: "last baseline" }}
+        style={{ justifyContent: "space-between", alignItems: "flex-end" }}
         className="wrapper"
       >
         {!params.simple && (
           <div>Time elapsed since launch {getElapsedTime()} </div>
         )}
-        <p>#{params.id}</p>
+        #{params.id}
       </div>
     </div>
   );
