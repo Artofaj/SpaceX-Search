@@ -14,7 +14,7 @@ const PastLaunches = () => {
     <section id="Past Launches">
       <h1>Past launches</h1>
 
-      <div id="launch-container" className="wrapper">
+      <div className="wrapper launch-container">
         {launches.map((launch, index) => {
           if (index < numberOfLaunches) {
             return (

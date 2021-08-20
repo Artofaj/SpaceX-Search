@@ -20,15 +20,14 @@
 html {
   background-color: var(--primary-bg-color);
   color: var(--primary-font-color);
-  padding: var(--padding-md);
 }
 
-body * {
+* {
   box-sizing: border-box;
 }
 
 .limited-width {
-  width: 100%;
+  width: calc(100% - var(--padding-lg));
   max-width: var(--max-width);
   margin: auto;
 }
@@ -72,15 +71,16 @@ label input {
   width: 100%;
 }
 
-table {
-  max-width: 100%;
-  overflow: auto;
+.launch-container {
+  width: 100%;
+  max-width: calc(100vw - var(--padding-lg));
+  overflow: hidden;
 }
 
 .card {
   border-radius: var(--rounded-corners);
-  padding: var(--padding-sm) var(--padding-md);
   flex: 1 1 20%;
+  padding: var(--padding-sm) var(--padding-md);
   max-width: 100%;
   overflow: auto;
 }

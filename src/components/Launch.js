@@ -36,7 +36,13 @@ const Launch = (params) => {
   const Separator = () => {
     let blink = isOdd(now) === 1 ? true : false;
 
-    return <span style={{ opacity: blink ? 0.5 : 0.75, padding: "0 var(--padding-sm)"}}>:</span>;
+    return (
+      <span
+        style={{ opacity: blink ? 0.5 : 0.75, padding: "0 var(--padding-sm)" }}
+      >
+        :
+      </span>
+    );
   };
 
   const getElapsedTime = () => {
@@ -74,7 +80,7 @@ const Launch = (params) => {
     );
   };
 
-  const styles = {
+  const cardStyles = {
     backgroundColor: getBGColor(),
     color: params.simple
       ? "var(--secondary-font-color)"
@@ -82,7 +88,7 @@ const Launch = (params) => {
   };
 
   return (
-    <div className="card" style={styles}>
+    <div className="card" style={cardStyles}>
       <h1>{params.name}</h1>
       <div
         style={{ justifyContent: "space-between", alignItems: "flex-end" }}

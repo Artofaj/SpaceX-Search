@@ -49,8 +49,7 @@ const SearchResult = () => {
       launchStore.searchTriggered && (
         <section>
           <h1>Search Result</h1>
-
-          {getResult()}
+          <div className="wrapper launch-container">{getResult()}</div>
         </section>
       )
   );
