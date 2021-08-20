@@ -5,7 +5,7 @@ import SearchResult from "./components/searchResult";
 
 const App = () => {
   return (
-      <div className="limited-width wrapper --column">
+      <div style={{gap:0}} className="limited-width wrapper --column">
         <Searchbar />
         <main>
           <SearchResult />
